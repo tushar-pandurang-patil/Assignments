@@ -1,0 +1,231 @@
+---------------------------------------------
+Problem 1:
+---------------------------------------------
+
+tusharpatil@MSI:~$ pwd
+/home/tusharpatil
+tusharpatil@MSI:~$ ls
+ABC  abc.sh  abc123.txt  user1  user2
+tusharpatil@MSI:~$ mkdir LinuxAssignment
+tusharpatil@MSI:~$ cd LinuxAssignment
+tusharpatil@MSI:~/LinuxAssignment$ touch file1.txt
+tusharpatil@MSI:~/LinuxAssignment$ cat file1.txt
+tusharpatil@MSI:~/LinuxAssignment$ mkdir docs
+tusharpatil@MSI:~/LinuxAssignment$ cp file1.txt docs
+tusharpatil@MSI:~/LinuxAssignment$ mv file1.txt file2.txt
+tusharpatil@MSI:~/LinuxAssignment$ chmod 744 file2.txt
+tusharpatil@MSI:~/LinuxAssignment$ ls -lrt
+total 4
+-rwxr--r-- 1 tusharpatil tusharpatil    0 Mar  7 21:08 file2.txt
+drwxr-xr-x 2 tusharpatil tusharpatil 4096 Mar  7 21:10 docs
+tusharpatil@MSI:~/LinuxAssignment$ cd /
+tusharpatil@MSI:/$ ls -lrt
+total 2120
+drwxr-xr-x   2 root root    4096 Apr 18  2022 boot
+-rwxrwxrwx   1 root root 2102392 Nov 11 02:59 init
+lrwxrwxrwx   1 root root       7 Nov 23 03:06 bin -> usr/bin
+lrwxrwxrwx   1 root root       8 Nov 23 03:06 sbin -> usr/sbin
+lrwxrwxrwx   1 root root      10 Nov 23 03:06 libx32 -> usr/libx32
+lrwxrwxrwx   1 root root       9 Nov 23 03:06 lib64 -> usr/lib64
+lrwxrwxrwx   1 root root       9 Nov 23 03:06 lib32 -> usr/lib32
+lrwxrwxrwx   1 root root       7 Nov 23 03:06 lib -> usr/lib
+drwxr-xr-x   2 root root    4096 Nov 23 03:06 srv
+drwxr-xr-x   2 root root    4096 Nov 23 03:06 opt
+drwxr-xr-x   2 root root    4096 Nov 23 03:06 media
+drwxr-xr-x  14 root root    4096 Nov 23 03:06 usr
+drwxr-xr-x  13 root root    4096 Nov 23 03:07 var
+drwxr-xr-x   8 root root    4096 Nov 23 03:07 snap
+drwx------   2 root root   16384 Mar  1 17:38 lost+found
+drwxr-xr-x   5 root root    4096 Mar  1 17:38 mnt
+drwxr-xr-x   3 root root    4096 Mar  1 17:38 home
+drwx------   4 root root    4096 Mar  1 17:39 root
+dr-xr-xr-x  11 root root       0 Mar  7 20:52 sys
+dr-xr-xr-x 236 root root       0 Mar  7 20:52 proc
+drwxr-xr-x  16 root root    3560 Mar  7 20:52 dev
+drwxr-xr-x  73 root root    4096 Mar  7 20:52 etc
+drwxr-xr-x  20 root root     580 Mar  7 20:57 run
+drwxrwxrwt   6 root root    4096 Mar  7 21:08 tmp
+tusharpatil@MSI:~$ cd /home/tusharpatil
+tusharpatil@MSI:~$ find . -type f -name '*.txt'
+./abc123.txt
+./LinuxAssignment/file2.txt
+./LinuxAssignment/docs/file1.txt
+tusharpatil@MSI:~$ cd LinuxAssignment
+tusharpatil@MSI:~/LinuxAssignment$ ls
+docs  file2.txt
+tusharpatil@MSI:~/LinuxAssignment$ vi file2.txt
+tusharpatil@MSI:~/LinuxAssignment$ grep 'lines' file2.txt
+first 10 lines of this file to quickly glance at its contents using a command.
+b. Now, to check the end of the file for any recent additions, display the last 5 lines of
+c. In a file named "numbers.txt," there are a series of numbers. Display the first 15 lines of
+d. To focus on the last few numbers of the dataset, display the last 3 lines of "numbers.txt".
+f. In a file named "duplicate.txt," there are several lines of text, some of which are
+duplicates. Use a command to display only the unique lines from "duplicate.txt."
+tusharpatil@MSI:~/LinuxAssignment$
+tusharpatil@MSI:~/LinuxAssignment$ date
+Thu Mar  7 19:50:29 IST 2024
+tusharpatil@MSI:~/LinuxAssignment$ ifconfig
+eth0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 172.28.22.119  netmask 255.255.240.0  broadcast 172.28.31.255
+        inet6 fe80::215:5dff:fe30:d2b7  prefixlen 64  scopeid 0x20<link>
+        ether 00:15:5d:30:d2:b7  txqueuelen 1000  (Ethernet)
+        RX packets 11975  bytes 20401323 (20.4 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 8461  bytes 716817 (716.8 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 0  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+tusharpatil@MSI:~/LinuxAssignment$
+tusharpatil@MSI:~/LinuxAssignment$ ping 8.8.8.8
+PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
+64 bytes from 8.8.8.8: icmp_seq=1 ttl=118 time=6.54 ms
+64 bytes from 8.8.8.8: icmp_seq=2 ttl=118 time=6.86 ms
+64 bytes from 8.8.8.8: icmp_seq=3 ttl=118 time=7.07 ms
+64 bytes from 8.8.8.8: icmp_seq=4 ttl=118 time=7.45 ms
+64 bytes from 8.8.8.8: icmp_seq=5 ttl=118 time=6.91 ms
+^C
+--- 8.8.8.8 ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 4007ms
+rtt min/avg/max/mdev = 6.540/6.965/7.449/0.296 ms
+tusharpatil@MSI:~/LinuxAssignment$
+tusharpatil@MSI:~/LinuxAssignment$ ls
+docs  file2.txt
+tusharpatil@MSI:~/LinuxAssignment$ zip -r docs.zip docs
+  adding: docs/ (stored 0%)
+  adding: docs/file1.txt (stored 0%)
+tusharpatil@MSI:~/LinuxAssignment$ ls
+docs  docs.zip  file2.txt
+tusharpatil@MSI:~/LinuxAssignment$
+tusharpatil@MSI:~/LinuxAssignment$ cp docs.zip newdocs && unzip docs.zip
+Archive:  docs.zip
+replace docs/file1.txt? [y]es, [n]o, [A]ll, [N]one, [r]ename: y
+ extracting: docs/file1.txt
+tusharpatil@MSI:~/LinuxAssignment$
+tusharpatil@MSI:~/LinuxAssignment$ cd docs
+tusharpatil@MSI:~/LinuxAssignment/docs$ vi file1.txt
+tusharpatil@MSI:~/LinuxAssignment/docs$ sed 's/directory/folder/1' file1.txt
+Problem 1: Read the instructions carefully and answer accordingly. If there is
+any need to insert some data then do that as well.
+a) Navigate and List:
+a. Start by navigating to your home folder and list its contents. Then, move into a
+folder named "LinuxAssignment" if it exists; otherwise, create it.
+b) File Management:
+a. Inside the "LinuxAssignment" folder, create a new file named "file1.txt". Display its
+contents.
+c) Directory Management:
+a. Create a new folder named "docs" inside the "LinuxAssignment" directory.
+d) Copy and Move Files:
+a. Copy the "file1.txt" file into the "docs" folder and rename it to "file2.txt".
+e) Permissions and Ownership:
+a. Change the permissions of "file2.txt" to allow read, write, and execute permissions for
+the owner and only read permissions for others. Then, change the owner of "file2.txt" to
+the current user.
+f) Final Checklist:
+a. Finally, list the contents of the "LinuxAssignment" folder and the root directory to
+ensure that all operations were performed correctly.
+g) File Searching:
+a. Search for all files with the extension ".txt" in the current folder and its subdirectories.
+b. Display lines containing a specific word in a file (provide a file name and the specific
+word to search).
+h) System Information:
+a. Display the current system date and time.
+i) Networking:
+a. Display the IP address of the system.
+b. Ping a remote server to check connectivity (provide a remote server address to ping).
+j) File Compression:
+a. Compress the "docs" folder into a zip file.
+b. Extract the contents of the zip file into a new folder.
+k) File Editing:
+a. Open the "file1.txt" file in a text editor and add some text to it.
+b. Replace a specific word in the "file1.txt" file with another word (provide the original
+word and the word to replace it with).
+tusharpatil@MSI:~/LinuxAssignment/docs$
+
+---------------------------------------------
+Problem 2:
+---------------------------------------------
+
+tusharpatil@MSI:~/LinuxAssignment/docs$ vi data.txt
+tusharpatil@MSI:~/LinuxAssignment/docs$ head -n 10 data.txt
+ CDAC MUMBAI
+Concepts of Operating System
+Assignment 1
+Problem 1: Read the instructions carefully and answer accordingly. If there is
+any need to insert some data then do that as well.
+a) Navigate and List:
+a. Start by navigating to your home directory and list its contents. Then, move into a
+directory named "LinuxAssignment" if it exists; otherwise, create it.
+b) File Management:
+a. Inside the "LinuxAssignment" directory, create a new file named "file1.txt". Display its
+tusharpatil@MSI:~/LinuxAssignment/docs$
+tusharpatil@MSI:~/LinuxAssignment/docs$
+tusharpatil@MSI:~/LinuxAssignment/docs$ tail -n 5 data.txt
+ Upload it on your GitHub repository
+
+Additional Tips:
+ Experiment with different options and parameters of each command to explore their
+functionalities.
+tusharpatil@MSI:~/LinuxAssignment/docs$
+tusharpatil@MSI:~/LinuxAssignment/docs$ vi numbers.txt
+tusharpatil@MSI:~/LinuxAssignment/docs$ head -n 15 numbers.txt
+1
+2
+3
+4
+5
+6
+6
+7
+86574
+53
+53
+523
+53
+5366
+454
+tusharpatil@MSI:~/LinuxAssignment/docs$
+tusharpatil@MSI:~/LinuxAssignment/docs$ tail -n 3 numbers.txt
+76
+876
+765
+tusharpatil@MSI:~/LinuxAssignment/docs$
+tusharpatil@MSI:~/LinuxAssignment/docs$ vi input.txt
+tusharpatil@MSI:~/LinuxAssignment/docs$ tr [:lower:] [:upper:] <input.txt >output.txt
+tusharpatil@MSI:~/LinuxAssignment/docs$ ls
+data.txt  file1.txt  input.txt  numbers.txt  output.txt
+tusharpatil@MSI:~/LinuxAssignment/docs$ head -n 2 output.txt
+A PROCESS MIGRATES AMONG THE VARIOUS SCHEDULING QUEUES THROUGHOUT ITS
+LIFETIME. THE OPERATING SYSTEM MUST SELECT, FOR SCHEDULING PURPOSES, PROCESSES
+tusharpatil@MSI:~/LinuxAssignment/docs$ head -n 2 input.txt
+A process migrates among the various scheduling queues throughout its
+lifetime. The operating system must select, for scheduling purposes, processes
+tusharpatil@MSI:~/LinuxAssignment/docs$
+tusharpatil@MSI:~/LinuxAssignment/docs$ vi duplicate.txt
+tusharpatil@MSI:~/LinuxAssignment/docs$ cat duplicate.txt
+Using history command you can check for any command you previously used in the shell, this output will not show
+Using history command you can check for any command you previously used in the shell, this output will not show
+you the commands from the current running shells. Only after you exit your shell, those commands will be written
+into ~/.bash_history file, and history command tells us the details from there.
+into ~/.bash_history file, and history command tells us the details from there.
+The environment variable HISTFILESIZE determines the number of commands stored in the file. By default, the
+history command does not show timestamps.
+tusharpatil@MSI:~/LinuxAssignment/docs$ uniq -u duplicate.txt
+you the commands from the current running shells. Only after you exit your shell, those commands will be written
+The environment variable HISTFILESIZE determines the number of commands stored in the file. By default, the
+history command does not show timestamps.
+tusharpatil@MSI:~/LinuxAssignment/docs$
+tusharpatil@MSI:~/LinuxAssignment/docs$ vi fruit.txt
+tusharpatil@MSI:~/LinuxAssignment/docs$ uniq -c -u fruit.txt
+      1 Banana
+      1 Guava
+      1 Jackfruit
+      1 Lemon
+tusharpatil@MSI:~/LinuxAssignment/docs$
